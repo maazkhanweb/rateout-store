@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RATEOUT STORE logo">
+  <rect width="64" height="64" rx="16" fill="#1F1B18"/>
+  <path d="M22 11 L9 19 L14 31 L21 28 L21 53 L43 53 L43 28 L50 31 L55 19 L42 11 C39 17 25 17 22 11 Z" fill="#F4691F"/>
+  <path d="M24 11.5 C27 17 37 17 40 11.5" fill="none" stroke="#1F1B18" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M27 24 H35.5 A5.2 5.2 0 0 1 35.5 34.4 H27 Z M27 34.4 L36 46" fill="none" stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

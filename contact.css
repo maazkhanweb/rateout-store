@@ -1,0 +1,12 @@
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:start}
+.c-list{display:grid;gap:16px}
+.c-item{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);transition:transform .2s var(--ease)}
+.c-item:hover{transform:translateX(6px)}
+.c-item svg{width:44px;height:44px;padding:10px;border-radius:12px;background:var(--brand);color:#fff;border:1px solid var(--line);flex:none}
+.c-item small{color:var(--muted);display:block}
+.c-item strong{word-break:break-all}
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--sh);display:grid;gap:16px}
+.form label{display:grid;gap:6px;font-weight:800;font-size:.92rem}
+.form input,.form textarea,.form select{padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:600 1rem var(--fb);background:var(--paper)}
+.form textarea{min-height:130px;resize:vertical}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
