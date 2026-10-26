@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><link rel="icon" type="image/png" href="images/favicon.png"><title>Admin | RATEOUT STORE</title>
+<link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/admin.css"></head>
+<body data-page="admin">
+<div id="site-header"></div>
+<main class="admin"><div class="wrap">
+  <div class="a-head"><h1>Admin panel</h1><button class="btn alt sm" id="logout">Log out</button></div>
+  <div class="stats" id="stats"></div>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-t="products">Products</button>
+    <button class="tab" data-t="sale">Sale entry</button>
+    <button class="tab" data-t="records">Sales records</button>
+  </div>
+
+  <section class="panel" id="t-products">
+    <div class="bar"><input id="pq" type="search" placeholder="Search products..."><button class="btn sm" id="addP">+ New product</button></div>
+    <div class="tbl-wrap"><table><thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Sizes</th><th></th></tr></thead><tbody id="pBody"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="t-sale" hidden>
+    <form class="sale-form" id="saleForm">
+      <h2>Record a sale</h2>
+      <div class="two">
+        <label>Date<input type="date" name="date" required></label>
+        <label>Product<select name="product" id="sProduct" required></select></label>
+        <label>Size<select name="size" id="sSize"></select></label>
+        <label>Quantity<input type="number" name="qty" min="1" value="1" required></label>
+        <label>Price per piece<input type="number" name="price" min="0" required></label>
+        <label>Total<input name="total" readonly></label>
+        <label>Customer name<input name="customer" placeholder="Optional"></label>
+        <label>Customer phone<input name="phone" placeholder="Optional"></label>
+        <label>Payment<select name="pay"><option>Cash</option><option>Easypaisa</option><option>JazzCash</option><option>Bank transfer</option><option>Cash on delivery</option></select></label>
+        <label>Note<input name="note" placeholder="Optional"></label>
+      </div>
+      <button class="btn" type="submit">Save sale</button>
+    </form>
+  </section>
+
+  <section class="panel" id="t-records" hidden>
+    <div class="bar"><span id="sheetState" class="chip"></span><button class="btn alt sm" id="pdf">Download PDF</button></div>
+    <div class="tbl-wrap"><table><thead><tr><th>Date</th><th>Product</th><th>Size</th><th>Qty</th><th>Total</th><th>Customer</th><th>Payment</th><th></th></tr></thead><tbody id="sBody"></tbody></table></div>
+    <p class="empty" id="sEmpty" hidden>No sales yet. Use the "Sale entry" tab to record your first sale.</p>
+  </section>
+</div></main>
+
+<div class="modal" id="modal" hidden><form class="m-card" id="pForm">
+  <h2 id="mTitle">New product</h2>
+  <div class="two">
+    <label>Name<input name="name" required></label>
+    <label>Category<select name="category"><option>T-Shirt</option><option>Oversized</option><option>Polo</option><option>Hoodie</option></select></label>
+    <label>Price<input name="price" type="number" min="0" required></label>
+    <label>Stock<input name="stock" type="number" min="0" required></label>
+    <label>Sizes (comma separated)<input name="sizes" placeholder="S, M, L, XL"></label>
+    <label>Shirt colour<input name="color" type="color" value="#0E5E57"></label>
+  </div>
+  <label>Description<input name="desc"></label>
+  <label>Photo (optional)<input name="file" type="file" accept="image/*"></label>
+  <div class="m-pre" id="mPre"></div>
+  <div class="m-act"><button type="button" class="btn alt sm" id="mCancel">Cancel</button><button class="btn sm" type="submit">Save</button></div>
+</form></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="js/config.js"></script><script src="js/store.js"></script><script src="js/sheet.js"></script><script src="js/common.js"></script><script src="js/admin.js"></script>
+</body></html>
